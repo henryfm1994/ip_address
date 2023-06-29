@@ -100,7 +100,7 @@ function App() {
         position={[data.location.lat, data.location.lng]}
         icon={markerIcon}
       >
-        <Popup>{query.length === 0 ? "Your IP" : query}</Popup>
+        <Popup>{query.length === 0 ? "Google" : query}</Popup>
       </Marker>
     );
   }
@@ -154,7 +154,7 @@ function App() {
       <MapContainer
         className="map__main"
         center={{ lat: data.location.lat, lng: data.location.lng }}
-        zoom={16}
+        zoom={18}
         scrollWheelZoom={false}
       >
         <TileLayer
