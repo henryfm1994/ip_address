@@ -1,0 +1,76 @@
+.header__main {
+  background-image: url(./images/pattern-bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // width: 100%;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.header__main h1 {
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.header__form {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  margin: 0;
+  width: 50%;
+  height: auto;
+  position: relative;
+}
+
+input {
+  border-radius: 0.75rem 0 0 0.75rem;
+  border: none;
+  padding: 0 1.5rem;
+  width: 80%;
+  height: 3.2rem;
+  font-size: 1.2em;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.header__img {
+  background-color: $Very-Dark-Gray;
+  border-radius: 0 0.75rem 0.75rem 0;
+  padding: 1rem 1.2rem;
+
+  &:hover {
+    background-color: darken($color: $Dark-Gray, $amount: 30);
+  }
+}
+
+.header__error {
+  color: rgb(223, 22, 22);
+  font-size: 1.2em;
+  font-style: italic;
+  position: absolute;
+  // bottom: 1px;
+  top: 3.2rem;
+  left: 2rem;
+}
+
+@media (max-width: 725px) {
+  .header__main {
+    background-image: url(./images/pattern-bg-mobile.png);
+    height: 300px;
+  }
+  .header__form {
+    width: 75%;
+  }
+  .header__error {
+    font-size: 0.9em;
+    left: 0;
+  }
+}
